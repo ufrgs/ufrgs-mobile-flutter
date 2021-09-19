@@ -1,0 +1,48 @@
+name: ufrgs_mobile
+description: A new Flutter project. Created by Slidy
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+## Slidy Scripts 
+vars: 
+    clean: flutter clean
+    get: flutter pub get
+    runner: flutter pub run build_runner
+scripts: 
+    mobx_build: $runner build
+    mobx_watch: $clean & $get & $runner watch
+    mobx_build_clean: $clean & $get & $runner build --delete-conflicting-outputs
+
+
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  dio: ^3.0.10
+  shared_preferences: ^2.0.6
+  flutter_mobx: ^1.1.0+2
+  mobx: ^1.2.1+4
+  flutter_modular: ^3.0.1
+  flutter_html: ^1.3.0
+  url_launcher: ^6.0.2
+  share: ^2.0.1
+  dio_cache_interceptor: ^1.0.0
+  sqlite3_flutter_libs: ^0.4.1
+  asuka: ^1.0.4
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  mockito: any
+  modular_codegen: ^2.1.0
+  mobx_codegen: ^1.1.2
+  build_runner: ^1.10.1
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
