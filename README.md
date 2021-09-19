@@ -1,16 +1,22 @@
-# ufrgs_mobile
+# UFRGS MOBILE - FLUTTER APP
 
-A new Flutter project. Created by Slidy
+### IMPORTANT
+You need to create the settings file (eg. lib/settings.dart) and supply the following information:
 
-## Getting Started
+```sh 
+String BASE_URL = ""
+String CLIENT_ID = ""
+String CLIENT_SECRET = ""
+String GRANT_TYPE = ""
+String SCOPE = ""
+```
 
-This project is a starting point for a Flutter application.
+### Build the project
+The project uses mobx so in order to build it, first you need to generate the .g files.
+For that use the following command:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub run build_runner build
+or
+flutter pub run build_runner build --delete-conflicting-outputs
+```
